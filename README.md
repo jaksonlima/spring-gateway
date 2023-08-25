@@ -15,3 +15,6 @@ http://localhost:8081/api
 ```
 http://localhost:8081/users
 ```
+```
+http://localhost:8081/v2/api
+```
