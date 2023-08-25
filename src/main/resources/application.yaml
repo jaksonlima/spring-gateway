@@ -17,3 +17,9 @@ spring:
           uri: https://jsonplaceholder.typicode.com
           predicates:
             - Path=/users
+        - id: httpbin_regex
+          uri: http://httpbin.org
+          predicates:
+            - Path=/v2/api/**
+          filters:
+            - SetPath=/

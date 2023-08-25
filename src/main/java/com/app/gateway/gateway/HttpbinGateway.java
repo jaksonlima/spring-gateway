@@ -6,10 +6,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class PersonGateway {
+public class HttpbinGateway {
 
     @Bean
-    public RouteLocator personRouteLocator(final RouteLocatorBuilder builder) {
+    public RouteLocator HttpbinRouteLocator(final RouteLocatorBuilder builder) {
         return builder.routes()
                 .route("path_route", r -> r.path("/api/**")
                         .filters(f -> f.setPath("/"))
