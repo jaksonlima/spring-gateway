@@ -1,0 +1,19 @@
+management:
+  endpoints:
+    gateway:
+      enabled: true
+    web:
+      exposure:
+        include: 'gateway'
+
+server:
+  port: 8081
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: json_placeholder
+          uri: https://jsonplaceholder.typicode.com
+          predicates:
+            - Path=/users
